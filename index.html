@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ Thống Quản Lý Ký Túc Xá Sinh Viên Thông Minh</title>
+    <!-- Thêm CSS ngoại vi và Google Fonts / Font Awesome để làm giao diện đẹp hơn -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fa-solid fa-hotel-sidebar logo-icon"></i>
+                <div class="logo-text">
+                    <h1>HỆ THỐNG QUẢN LÝ KÝ TÚC XÁ SINH VIÊN THÔNG MINH</h1>
+                    <p>NĂM HỌC 2026-2027</p>
+                </div>
+            </div>
+            <div class="user-actions">
+                <a href="#" class="btn-login"><i class="fa-solid fa-right-to-bracket"></i> Đăng nhập</a>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="active"><i class="fa-solid fa-house"></i> Trang chủ</a>
+            <a href="#search-section"><i class="fa-solid fa-magnifying-glass"></i> Tìm kiếm phòng</a>
+            <a href="#rooms-section"><i class="fa-solid fa-bed"></i> Danh sách phòng</a>
+            <a href="#register-section"><i class="fa-solid fa-pen-to-square"></i> Đăng ký phòng</a>
+            <a href="#status-section"><i class="fa-solid fa-clipboard-list"></i> Trạng thái duyệt</a>
+            <a href="#contact-section"><i class="fa-solid fa-address-book"></i> Liên hệ</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="banner">
+            <div class="banner-overlay"></div>
+            <div class="banner-text">
+                <h2>Không Gian Sống Hiện Đại - Nâng Bước Tương Lai</h2>
+                <p>Hệ thống đăng ký trực tuyến nhanh chóng, minh bạch và tiện lợi cho sinh viên</p>
+                <a href="#register-section" class="cta-btn">Đăng Ký Ngay <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+        <section class="about">
+            <div class="section-title">
+                <h2>Giới Thiệu Hệ Thống & Tiện Ích</h2>
+                <span class="line"></span>
+            </div>
+            <p class="about-desc">
+                Ký túc xá thông minh mang đến không gian lưu trú an toàn, tiện nghi với sự hỗ trợ tối đa của công nghệ. 
+                Sinh viên có thể chủ động quản lý toàn bộ quá trình ở nội trú ngay trên nền tảng online.
+            </p>
+            <div class="utilities-grid">
+                <div class="utility-item">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h3>An ninh 24/7</h3>
+                    <p>Hệ thống camera giám sát và kiểm soát ra vào bằng khuôn mặt/thẻ từ sinh viên.</p>
+                </div>
+                <div class="utility-item">
+                    <i class="fa-solid fa-wifi"></i>
+                    <h3>Internet Tốc Độ Cao</h3>
+                    <p>Hệ thống Wi-Fi phủ sóng toàn bộ các tòa nhà, phục vụ học tập tốt nhất.</p>
+                </div>
+                <div class="utility-item">
+                    <i class="fa-solid fa-bolt"></i>
+                    <h3>Điện Nước Thông Minh</h3>
+                    <p>Theo dõi và thanh toán chỉ số điện, nước trực tuyến qua ví điện tử/ngân hàng.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="search-section" class="filter">
+            <div class="section-title">
+                <h2>Tìm Kiếm Phòng Trống</h2>
+                <span class="line"></span>
+            </div>
+            <div class="filter-box">
+                <div class="filter-group">
+                    <label><i class="fa-solid fa-building"></i> Khu nhà</label>
+                    <select>
+                        <option value="">-- Tất cả các khu --</option>
+                        <option value="A">Khu A - Dành cho Nam</option>
+                        <option value="B">Khu B - Dành cho Nữ</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label><i class="fa-solid fa-layer-group"></i> Tầng</label>
+                    <select>
+                        <option value="">-- Tất cả các tầng --</option>
+                        <option value="1">Tầng 1</option>
+                        <option value="2">Tầng 2</option>
+                        <option value="3">Tầng 3</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label><i class="fa-solid fa-users"></i> Loại phòng</label>
+                    <select>
+                        <option value="">-- Tất cả loại phòng --</option>
+                        <option value="2">Phòng dịch vụ (2 người)</option>
+                        <option value="4">Phòng tiêu chuẩn (4 người)</option>
+                        <option value="6">Phòng phổ thông (6 người)</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label><i class="fa-solid fa-circle-dollar-to-slot"></i> Mức giá</label>
+                    <select>
+                        <option value="">-- Tất cả mức giá --</option>
+                        <option value="1">1.000.000đ/tháng</option>
+                        <option value="1.5">1.500.000đ/tháng</option>
+                        <option value="2">2.000.000đ/tháng</option>
+                    </select>
+                </div>
+
+                <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i> Tìm Kiếm</button>
+            </div>
+        </section>
+
+        <section id="rooms-section" class="rooms">
+            <div class="section-title">
+                <h2>Danh Sách Phòng Trống Nổi Bật</h2>
+                <span class="line"></span>
+            </div>
+
+            <div class="room-container">
+                <article class="room-card">
+                    <div class="room-badge available">Còn chỗ</div>
+                    <img src="https://tse1.mm.bing.net/th/id/OIP.rJqVeEWpI0h5BYYiVzPcagHaE8?pid=Api&P=0&h=180" alt="Phòng KTX A105">
+                    <div class="room-info">
+                        <h3>Phòng A105</h3>
+                        <div class="room-meta">
+                            <span><i class="fa-solid fa-building"></i> Khu Nam (Khu A)</span>
+                            <span><i class="fa-solid fa-layer-group"></i> Tầng 1</span>
+                        </div>
+                        <div class="room-amenities">
+                            <span title="Có Điều hòa"><i class="fa-solid fa-snowflake"></i></span>
+                            <span title="Có Bình nóng lạnh"><i class="fa-solid fa-faucet-drip"></i></span>
+                            <span title="Có Wifi công suất lớn"><i class="fa-solid fa-wifi"></i></span>
+                        </div>
+                        <p class="room-capacity">Loại phòng: <strong>6 người</strong></p>
+                        <p class="room-slots">Chỗ trống còn lại: <span class="highlight">2 / 6 giường</span></p>
+                        <p class="price">1.000.000đ <span>/ người / tháng</span></p>
+                        <a href="#register-section" class="btn-booking">Đăng Ký Ngay</a>
+                    </div>
+                </article>
+
+                <article class="room-card">
+                    <div class="room-badge available">Còn chỗ</div>
+                    <img src="https://tse2.mm.bing.net/th/id/OIP.dt2r9YN3UP8FeIpqViAt6gHaJ4?pid=Api&P=0&h=180" alt="Phòng KTX B113">
+                    <div class="room-info">
+                        <h3>Phòng B113</h3>
+                        <div class="room-meta">
+                            <span><i class="fa-solid fa-building"></i> Khu Nữ (Khu B)</span>
+                            <span><i class="fa-solid fa-layer-group"></i> Tầng 1</span>
+                        </div>
+                        <div class="room-amenities">
+                            <span title="Có Điều hòa"><i class="fa-solid fa-snowflake"></i></span>
+                            <span title="Có Bình nóng lạnh"><i class="fa-solid fa-faucet-drip"></i></span>
+                            <span title="Có Wifi công suất lớn"><i class="fa-solid fa-wifi"></i></span>
+                        </div>
+                        <p class="room-capacity">Loại phòng: <strong>4 người</strong></p>
+                        <p class="room-slots">Chỗ trống còn lại: <span class="highlight">2 / 4 giường</span></p>
+                        <p class="price">1.500.000đ <span>/ người / tháng</span></p>
+                        <a href="#register-section" class="btn-booking">Đăng Ký Ngay</a>
+                    </div>
+                </article>
+
+                <article class="room-card">
+                    <div class="room-badge danger">Sắp hết chỗ</div>
+                    <img src="https://tse1.mm.bing.net/th/id/OIP.RER2CKuMFr5W-2nIqUEUcAHaF2?pid=Api&P=0&h=180" alt="Phòng KTX A207">
+                    <div class="room-info">
+                        <h3>Phòng A207 (Dịch vụ)</h3>
+                        <div class="room-meta">
+                            <span><i class="fa-solid fa-building"></i> Khu Nam (Khu A)</span>
+                            <span><i class="fa-solid fa-layer-group"></i> Tầng 2</span>
+                        </div>
+                        <div class="room-amenities">
+                            <span title="Có Điều hòa"><i class="fa-solid fa-snowflake"></i></span>
+                            <span title="Có Bình nóng lạnh"><i class="fa-solid fa-faucet-drip"></i></span>
+                            <span title="Có Wifi công suất lớn"><i class="fa-solid fa-wifi"></i></span>
+                            <span title="Có Tủ lạnh tủ quần áo riêng"><i class="fa-solid fa-mattress-pillow"></i></span>
+                        </div>
+                        <p class="room-capacity">Loại phòng: <strong>2 người</strong></p>
+                        <p class="room-slots">Chỗ trống còn lại: <span class="highlight-danger">1 / 2 giường</span></p>
+                        <p class="price">2.000.000đ <span>/ người / tháng</span></p>
+                        <a href="#register-section" class="btn-booking">Đăng Ký Ngay</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="register-section" class="register">
+            <div class="section-title">
+                <h2>Form Đăng Ký Nội Trú Trực Tuyến</h2>
+                <span class="line"></span>
+            </div>
+
+            <form action="#" method="POST" class="booking-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="fullname">Họ và tên <span class="required">*</span></label>
+                        <input type="text" id="fullname" placeholder="Nguyễn Văn A" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="studentid">Mã số sinh viên (MSSV) <span class="required">*</span></label>
+                        <input type="text" id="studentid" placeholder="Ví dụ: 20261234" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="idcard">Số CMND / CCCD <span class="required">*</span></label>
+                        <input type="text" id="idcard" placeholder="Nhập 12 số CCCD" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label id="gender-label">Giới tính <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="gender" value="Nam" checked> Nam</label>
+                            <label><input type="radio" name="gender" value="Nữ"> Nữ</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="birthday">Ngày sinh <span class="required">*</span></label>
+                        <input type="date" id="birthday" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="faculty">Khoa / Viện đào tạo <span class="required">*</span></label>
+                        <select id="faculty" required>
+                            <option value="">-- Chọn Khoa/Viện --</option>
+                            <option value="CNTT">Công nghệ thông tin</option>
+                            <option value="KT">Kinh tế & Quản trị kinh doanh</option>
+                            <option value="NN">Ngôn ngữ nước ngoài</option>
+                            <option value="KH">Khoa học cơ bản</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Địa chỉ Email <span class="required">*</span></label>
+                        <input type="email" id="email" placeholder="sv@university.edu.vn" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Số điện thoại di động <span class="required">*</span></label>
+                        <input type="tel" id="phone" placeholder="Ví dụ: 0912345678" required>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="address">Địa chỉ thường trú (Hộ khẩu) <span class="required">*</span></label>
+                        <textarea id="address" rows="2" placeholder="Số nhà, tên đường, xã/phường, quận/huyện, tỉnh thành..." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="room-select">Nguyện vọng xếp phòng <span class="required">*</span></label>
+                        <select id="room-select" required>
+                            <option value="">-- Chọn mã phòng mong muốn --</option>
+                            <option value="A105">Phòng A105 (Khu Nam - 1.000.000đ)</option>
+                            <option value="A207">Phòng A207 (Khu Nam - 2.000.000đ)</option>
+                            <option value="B113">Phòng B113 (Khu Nữ - 1.500.000đ)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Phương thức thanh toán dự kiến <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="pay" value="Chuyển khoản" checked> Chuyển khoản QR-Code</label>
+                            <label><input type="radio" name="pay" value="Tiền mặt"> Tiền mặt tại quầy</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label id="priority-label">Đối tượng ưu tiên (nếu có)</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="priority" value="Con thương binh"> Con thương binh/Liệt sĩ</label>
+                            <label><input type="checkbox" name="priority" value="Vùng sâu vùng xa"> Hộ nghèo/Vùng sâu vùng xa</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="note">Ghi chú thêm</label>
+                        <textarea id="note" rows="3" placeholder="Ví dụ: Mong muốn ở cùng phòng với bạn thân MSSV..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-submit">
+                    <button type="submit" class="submit-btn">
+                        <i class="fa-solid fa-paper-plane"></i> Gửi Y Cầu Đăng Ký
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <section id="status-section" class="student-table">
+            <div class="section-title">
+                <h2>Danh Sách Đăng Ký Mới Nhất</h2>
+                <span class="line"></span>
+            </div>
+            
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>MSSV</th>
+                            <th>Họ và Tên</th>
+                            <th>Mã Phòng</th>
+                            <th>Ngày Đăng Ký</th>
+                            <th>Hình Thức</th>
+                            <th>Trạng Thái</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><strong>1971020479</strong></td>
+                            <td>Phạm Ngọc Tú</td>
+                            <td><span class="room-tag">A105</span></td>
+                            <td>08/07/2026</td>
+                            <td>Chuyển khoản</td>
+                            <td><span class="status text-success"><i class="fa-solid fa-circle-check"></i> Đã Duyệt</span></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><strong>1971020060</strong></td>
+                            <td>Mai Xuân Chiến</td>
+                            <td><span class="room-tag">B113</span></td>
+                            <td>08/07/2026</td>
+                            <td>Chuyển khoản</td>
+                            <td><span class="status text-warning"><i class="fa-solid fa-clock"></i> Chờ Xét Duyệt</span></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><strong>1971020129</strong></td>
+                            <td>Nguyễn Văn Dương</td>
+                            <td><span class="room-tag">A207</span></td>
+                            <td>07/07/2026</td>
+                            <td>Tiền mặt</td>
+                            <td><span class="status text-success"><i class="fa-solid fa-circle-check"></i> Đã Duyệt</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact-section">
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3><i class="fa-solid fa-graduation-cap"></i> Ban Quản Lý Ký Túc Xá</h3>
+                <p><i class="fa-solid fa-location-dot"></i> Hà Đông </p>
+                <p><i class="fa-solid fa-phone"></i> Hotline: 1900 xxxx (8h00 - 17h00)</p>
+                <p><i class="fa-solid fa-envelope"></i> Email: ktx@university.edu.vn</p>
+            </div>
+            <div class="footer-links">
+                <h3>Liên Kết Nhanh</h3>
+                <ul>
+                    <li><a href="#">Nội quy ký túc xá</a></li>
+                    <li><a href="#">Biểu phí dịch vụ</a></li>
+                    <li><a href="#">Quy trình xử lý sự cố</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Kết Nối Với Chúng Tôi</h3>
+                <div class="social-icons">
+                    <a href="#" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" title="Youtube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" title="Zalo"><i class="fa-solid fa-comment-sms"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Hệ Thống Quản Lý Ký Túc Xá Sinh Viên Thông Minh. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
